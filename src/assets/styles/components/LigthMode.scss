@@ -1,0 +1,63 @@
+.light {
+  background-color: $Very-Light-Grayish-Blue;
+
+  .todo {
+    &__input {
+      border: 1px solid $Very-Light-Grayish-Blue;
+      background-color: $Very-Light-Gray;
+      color: $Very-Dark-Grayish-Blue2;
+    }
+
+    &__controls {
+      background-color: $Very-Light-Gray;
+      border-radius: 5px;
+
+      & button {
+        &.delete:hover {
+          color: $Very-Dark-Grayish-Blue2;
+        }
+      }
+    }
+  }
+
+  .list {
+    background-color: $Very-Light-Gray;
+    color: $Very-Dark-Grayish-Blue2;
+    box-shadow: 5px 17px 15px 5px rgba(0, 0, 0, 0.068);
+
+    &__container {
+      & .list__container--item {
+        border-bottom: 1px solid $Very-Light-Grayish-Blue;
+
+        & .item__button {
+          color: $Dark-Grayish-Blue;
+
+          & button {
+            border: 1px solid $Very-Light-Grayish-Blue;
+
+            &:hover {
+              border: 1px solid hsl(192, 100%, 67%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .completed {
+    & p {
+      color: $Light-Grayish-Blue;
+      text-decoration-line: line-through;
+      text-decoration-color: $Light-Grayish-Blue;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .light {
+    .todo__controls--filters {
+      background-color: $Very-Light-Gray;
+      color: $Very-Dark-Grayish-Blue2;
+    }
+  }
+}

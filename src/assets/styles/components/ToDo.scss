@@ -1,0 +1,91 @@
+.todo {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 35%;
+  min-width: 320px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+    color: white;
+    margin-bottom: 20px;
+
+    & h1 {
+      letter-spacing: 10px;
+    }
+
+    & button {
+      background-color: transparent;
+      border: 0;
+    }
+
+    & img {
+      width: 20px;
+    }
+  }
+
+  &__input {
+    border: 1px solid $Very-Dark-Grayish-Blue;
+    border-radius: 5px;
+    width: 100%;
+    padding: 15px 15px 15px 50px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    background-color: $Very-Dark-Desaturated-Blue;
+    outline: none;
+    color: $Light-Grayish-Blue;
+
+    &::placeholder {
+      font-size: 15px;
+      color: $Dark-Grayish-Blue;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    color: $Dark-Grayish-Blue;
+    font-size: 0.8em;
+
+    & button {
+      background-color: transparent;
+      border: none;
+
+      &.delete:hover {
+        color: $Light-Grayish-Blue-hover;
+      }
+    }
+
+    &--filters {
+      display: flex;
+
+      & li {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .todo__controls--filters {
+    position: absolute;
+    justify-content: center;
+    border-radius: 5px;
+    width: 100%;
+    right: 0px;
+    margin-top: 40px;
+    padding: 10px 0;
+    background-color: $Very-Dark-Desaturated-Blue;
+  }
+}
+
+.selected {
+  color: $Bright-Blue;
+  border: 10px solid red;
+}
