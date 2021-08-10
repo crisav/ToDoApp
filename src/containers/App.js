@@ -4,11 +4,11 @@ import ToDo from '../components/ToDo'
 import '../assets/styles/styles.scss'
 
 import headerDark from '@images/bg-desktop-dark.jpg'
-import headerLight from '@images/bg-desktop-light.jpg' 
+import headerLight from '@images/bg-desktop-light.jpg'
 
 const App = () => {
 
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   return (
     <main className={`container ${darkMode ? '' : 'light'}`}>
@@ -19,9 +19,9 @@ const App = () => {
             : <img src={headerLight} alt='header-image'/>
         }
       </div>
-      <ToDo 
+      <ToDo
         setDarkMode={setDarkMode}
-        darkMode={darkMode} 
+        darkMode={darkMode}
       />
     </main>
   )
