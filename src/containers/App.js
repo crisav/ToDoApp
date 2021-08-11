@@ -3,7 +3,9 @@ import React, { useState } from 'react'
 import ToDo from '../components/ToDo'
 import '../assets/styles/styles.scss'
 
-import headerDark from '@images/bg-desktop-dark.jpg'
+import headerDark from '@images/bg-desktop-dark.jpg' 
+import headerDarkMB from '@images/bg-mobile-dark.jpg'
+import headerLightMB from '@images/bg-mobile-light.jpg'
 import headerLight from '@images/bg-desktop-light.jpg'
 
 const App = () => {
@@ -15,8 +17,14 @@ const App = () => {
       <div className='container-img'>
         {
           darkMode 
-            ? <img src={headerDark} alt='header-image'/>
-            : <img src={headerLight} alt='header-image'/>
+            ? <picture>
+                <source media="(min-width:700px)" srcSet={headerDark}/>
+                <img src={headerDarkMB} alt='header-image'/>
+              </picture>
+            : <picture>
+                <source media="(min-width:700px)" srcSet={headerLight}/>
+                <img src={headerLightMB} alt='header-image'/>
+              </picture>
         }
       </div>
       <ToDo
